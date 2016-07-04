@@ -7,15 +7,11 @@ window.onunload = function() {
         }(navigator.userAgent || navigator.vendor || window.opera), check
 }, $(function() {
     function t() {
-        u = setInterval(n, i)
+        u = setInterval(n, 5)
     }
 
     function e() {
-        clearInterval(u), setTimeout(function() {
-            $("#index").scrollTop(0), d.removeClass("is-loading"), T.titleChanger(0), S.start(), T.sidebar(0, .1), T.intro(), window.mobilecheck() && TweenMax.to(".background-title-container", .6, {
-                opacity: 0
-            })
-        }, 800)
+        clearInterval(u)
     }
 
     function i() {
@@ -27,9 +23,7 @@ window.onunload = function() {
     }
 
     function o(t) {
-        $(".upper-type, .lower-type").text(t), $(".divider").css({
-            width: b + "%"
-        })
+        $(".upper-type").text(t)
     }
 
     function s() {
